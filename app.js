@@ -59,7 +59,7 @@ app.get("/post/:postName", function(req, res) {
     if (storedTitle === requestedTitle) {
       console.log("Match Found");
 
-      res.render("post");
+      res.render("post", {title: post.title, content: post.content});
 
     } else {
       console.log("No Match Found");
